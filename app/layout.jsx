@@ -44,32 +44,31 @@ export const metadata = {
   },
 }
 
+const structuredData = {
+  '@context': 'https://schema.org',
+  '@type': 'WebApplication',
+  name: 'Airbnb Review Calculator',
+  description:
+    'Calculate how many 5-star reviews you need to raise your Airbnb average rating.',
+  applicationCategory: 'UtilityApplication',
+  operatingSystem: 'Any',
+  offers: {
+    '@type': 'Offer',
+    price: '0',
+    priceCurrency: 'USD',
+  },
+}
+
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <head>
-        {/* Structured data for Google */}
+      <body>
+        {children}
         <script
           type="application/ld+json"
-          dangerouslySetInnerHTML={{
-            __html: JSON.stringify({
-              '@context': 'https://schema.org',
-              '@type': 'WebApplication',
-              name: 'Airbnb Review Calculator',
-              description:
-                'Calculate how many 5-star reviews you need to raise your Airbnb average rating.',
-              applicationCategory: 'UtilityApplication',
-              operatingSystem: 'Any',
-              offers: {
-                '@type': 'Offer',
-                price: '0',
-                priceCurrency: 'USD',
-              },
-            }),
-          }}
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
         />
-      </head>
-      <body>{children}</body>
+      </body>
     </html>
   )
 }

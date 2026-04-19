@@ -13,7 +13,7 @@ export const metadata = {
     'airbnb average rating',
   ],
   authors: [{ name: 'Airbnb Review Calculator' }],
-  metadataBase: new URL('https://your-domain.vercel.app'), // ← Update this with your actual Vercel URL
+  metadataBase: new URL('https://airbnb-review-calculator.vercel.app'),
   openGraph: {
     title: 'Airbnb Review Calculator – How Many 5-Star Reviews Do You Need?',
     description:
@@ -40,7 +40,7 @@ export const metadata = {
     },
   },
   alternates: {
-    canonical: 'https://your-domain.vercel.app', // ← Update this with your actual Vercel URL
+    canonical: 'https://airbnb-review-calculator.vercel.app',
   },
 }
 

@@ -1,0 +1,36 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-white text-airbnb-dark antialiased;
+  }
+}
+
+@layer components {
+  .input-field {
+    @apply w-full border border-airbnb-border rounded-xl px-4 py-3 text-airbnb-dark text-base
+           focus:outline-none focus:ring-2 focus:ring-airbnb-red focus:border-transparent
+           transition-all duration-200 bg-white placeholder-airbnb-gray;
+  }
+
+  .btn-primary {
+    @apply w-full bg-airbnb-red hover:bg-[#e0314f] text-white font-semibold
+           py-4 px-6 rounded-xl text-base transition-all duration-200
+           focus:outline-none focus:ring-2 focus:ring-airbnb-red focus:ring-offset-2
+           disabled:opacity-50 disabled:cursor-not-allowed;
+  }
+
+  .result-card {
+    @apply bg-gradient-to-br from-[#FF385C] to-[#e0314f] text-white rounded-2xl p-6 text-center shadow-lg;
+  }
+
+  .info-card {
+    @apply bg-airbnb-light border border-airbnb-border rounded-xl p-4;
+  }
+}

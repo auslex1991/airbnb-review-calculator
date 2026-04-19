@@ -20,7 +20,7 @@ export const metadata = {
       'Calculate exactly how many 5-star reviews you need to raise your Airbnb rating to your target score.',
     type: 'website',
     locale: 'en_US',
-    // images: ['/og-image.png'], // Optional: add an OG image for social sharing
+    images: ['/og-image.png'],
   },
   twitter: {
     card: 'summary_large_image',
